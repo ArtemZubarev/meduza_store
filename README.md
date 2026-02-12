@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MeduzaStore - Поставки из Китая
 
-## Getting Started
+Современный лендинг для компании MeduzaStore, специализирующейся на поставках товаров из Китая.
 
-First, run the development server:
+## 🚀 Технологии
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 16.1.6** - React фреймворк с App Router
+- **React 19.2.3** - Библиотека для создания UI
+- **Tailwind CSS 4** - Утилитарный CSS фреймворк
+- **TypeScript** - Типизированный JavaScript
+- **Manrope** - Основной шрифт (Google Fonts)
+
+## 📋 Структура проекта
+
+```
+.
+├── app/
+│   ├── layout.tsx      # Главный layout с шрифтом Manrope
+│   ├── page.tsx        # Главная страница лендинга
+│   └── globals.css     # Глобальные стили
+├── public/             # Статические файлы
+└── package.json        # Зависимости проекта
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Основные секции
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Hero Section** - Главный экран с заголовком и CTA
+2. **О нас** - Информация о компании и философии
+3. **Преимущества** - 4 карточки с ключевыми преимуществами
+4. **Процесс** - 5 шагов работы с клиентами
+5. **Услуги** - Полный список услуг компании
+6. **HoReCa** - Специальное предложение для HoReCa сектора
+7. **Кейсы** - 3 реальных кейса с клиентами
+8. **Footer** - Контакты, меню и юридическая информация
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Установка и запуск
 
-## Learn More
+### 1. Установка зависимостей
+```bash
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Запуск dev сервера
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Откройте [http://localhost:3000](http://localhost:3000) в браузере.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. Сборка для production
+```bash
+npm run build
+npm start
+```
 
-## Deploy on Vercel
+## 🎨 Дизайн
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Дизайн реализован по макету из Figma с использованием Figma MCP для автоматической генерации кода. Все изображения и иконки загружены через Figma API и хранятся в облаке.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Цветовая палитра:
+
+- **Основной фон**: `#f2f2f2`
+- **Темные секции**: `#181a1c`
+- **Акцентный синий**: `#5ab2ff`, `#27a6e6`, `#1572a1`
+- **Акцентный зеленый**: `#adff78`
+- **Текст**: `#181a1c` (основной), `#ababab` (вторичный)
+
+### Типографика:
+
+- **Шрифт**: Manrope (400, 500, 600, 700, 800)
+- **Заголовки**: 70px, 40px, 20px
+- **Текст**: 16px, 20px
+
+## 📱 Адаптивность
+
+⚠️ **Примечание**: Текущая версия оптимизирована для desktop (1920px). Для полноценной адаптивности требуется добавить медиа-запросы для планшетов и мобильных устройств.
+
+## 🛠️ Дальнейшее развитие
+
+- [ ] Адаптивный дизайн для мобильных устройств
+- [ ] Добавить анимации при скролле
+- [ ] Интеграция с CRM или формой обратной связи
+- [ ] Оптимизация изображений (локальное хранение)
+- [ ] SEO оптимизация (мета-теги, Open Graph)
+- [ ] Добавить блог или новости
+- [ ] Интеграция с Google Analytics
+
+## 📞 Контакты
+
+- **Телефон**: +7 812 998 02 78
+- **Telegram**: @meduzamen
+- **Адрес**: Санкт-Петербург, Московское шоссе, 7, ТРК "Торговый двор"
+
+## 📄 Лицензия
+
+© 2026 ИП Васенин Сергей Станиславович
+ИНН 434586016397 / ОГРНИП 324430000003612
