@@ -17,7 +17,7 @@ export default function About() {
             <span className="text-[#ababab]">Вы же не магазин!</span>
           </h2>
         </div>
-        <div className="text-xl font-medium text-[#181a1c] space-y-6">
+        <div className="text-xl font-normal text-[#181a1c] space-y-6">
           <p>
             Мы не традиционный магазин, заполненный готовым товаром.{" "}
             <span className="font-extrabold">
