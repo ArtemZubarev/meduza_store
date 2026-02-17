@@ -118,8 +118,8 @@ export const TgLogo = ({ className }: { className?: string }) => {
           fill="url(#paint0_linear_2_7)"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M11.3164 24.7361C18.6044 21.5608 23.4642 19.4675 25.8958 18.4561C32.8386 15.5684 34.2812 15.0667 35.2215 15.0502C35.4283 15.0465 35.8907 15.0978 36.1903 15.3408C36.4432 15.5461 36.5128 15.8233 36.5461 16.0179C36.5794 16.2124 36.6208 16.6557 36.5879 17.002C36.2117 20.9551 34.5837 30.5482 33.7555 34.9758C33.4051 36.8492 32.715 37.4774 32.047 37.5388C30.5952 37.6724 29.4928 36.5794 28.0866 35.6577C25.8863 34.2153 24.6433 33.3175 22.5075 31.91C20.0392 30.2834 21.6393 29.3894 23.0459 27.9284C23.4141 27.5461 29.8107 21.7278 29.9345 21.2C29.95 21.134 29.9644 20.8879 29.8182 20.758C29.672 20.6281 29.4563 20.6725 29.3006 20.7079C29.0799 20.7579 25.5648 23.0813 18.7554 27.6778C17.7577 28.3629 16.854 28.6967 16.0443 28.6792C15.1516 28.66 13.4346 28.1745 12.1581 27.7596C10.5925 27.2507 9.34818 26.9816 9.45653 26.1173C9.51297 25.6671 10.1329 25.2067 11.3164 24.7361Z"
           fill="white"
         />
@@ -133,8 +133,8 @@ export const TgLogo = ({ className }: { className?: string }) => {
           y2="49.6292"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#2AABEE" />
-          <stop offset="1" stop-color="#229ED9" />
+          <stop stopColor="#2AABEE" />
+          <stop offset="1" stopColor="#229ED9" />
         </linearGradient>
         <clipPath id="clip0_2_7">
           <rect width="50" height="50" fill="white" />
@@ -369,5 +369,49 @@ export const CaseIcon = ({ className }: { className?: string }) => (
       stroke="#FFA755"
       strokeWidth="2.1875"
     />
+  </svg>
+);
+export const CheckboxIcon = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    height="18"
+    viewBox="0 0 18 18"
+    fill="none"
+    className={className}
+  >
+    <path
+      d="M12.75 0.9375C15.1317 0.9375 17.0625 2.86827 17.0625 5.25V12.75C17.0625 15.1317 15.1317 17.0625 12.75 17.0625H5.25C2.86827 17.0625 0.9375 15.1317 0.9375 12.75V5.25C0.9375 2.86827 2.86827 0.9375 5.25 0.9375H12.75ZM12.0225 6.72754C11.8028 6.50787 11.4462 6.50787 11.2266 6.72754L8.625 9.3291L7.52246 8.22754C7.30278 8.00803 6.94716 8.00792 6.72754 8.22754C6.50792 8.44716 6.50803 8.80278 6.72754 9.02246L8.22754 10.5225C8.44721 10.7421 8.80279 10.7421 9.02246 10.5225L12.0225 7.52344C12.2421 7.30377 12.2421 6.94721 12.0225 6.72754Z"
+      fill="#ADFF78"
+    />
+  </svg>
+);
+export const BigCheckbox = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="56"
+    height="56"
+    viewBox="0 0 56 56"
+    fill="none"
+    className={className}
+  >
+    <g clipPath="url(#clip0_17_118)">
+      <path
+        d="M47.0481 47.0479C57.8109 36.2851 57.8109 18.835 47.0481 8.0722C36.2852 -2.69065 18.8352 -2.69065 8.07233 8.0722C-2.69051 18.835 -2.69051 36.2851 8.07233 47.0479C18.8352 57.8108 36.2852 57.8108 47.0481 47.0479Z"
+        fill="#51C663"
+      />
+      <path
+        d="M16 27.3129L23.6564 34.9692L38.9691 19.6566"
+        stroke="white"
+        strokeWidth="4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_17_118">
+        <rect width="55.12" height="55.12" fill="white" />
+      </clipPath>
+    </defs>
   </svg>
 );

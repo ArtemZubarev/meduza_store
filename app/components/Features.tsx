@@ -35,23 +35,23 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="w-full max-w-[1520px] mx-auto px-4 py-10">
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 ">
+    <section className="w-full max-w-[1520px] mx-auto px-4 py-8 md:py-10">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         {features.map((feature) => (
           <div
             key={feature.id}
-            className="bg-white rounded-3xl p-8 hover:shadow-xl transition-shadow duration-300 relative pb-50 overflow-hidden"
+            className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-xl transition-shadow duration-300 relative pb-32 md:pb-50 overflow-hidden"
           >
-            <h3 className="text-2xl font-bold text-[#181a1c] mb-4 min-h-[4.5rem] leading-tight">
+            <h3 className="text-xl md:text-2xl font-bold text-[#181a1c] mb-3 md:mb-4 min-h-[3.5rem] md:min-h-[4.5rem] leading-tight">
               {feature.title}
             </h3>
-            <p className="text-base font-medium text-[#181a1c] mb-6">
+            <p className="text-sm md:text-base font-medium text-[#181a1c] mb-4 md:mb-6">
               {feature.description}
             </p>
             <img
               src={feature.image}
               alt={feature.title}
-              className={`rounded-2xl absolute left-1/2 -translate-x-1/2 ${feature.imgClasses}`}
+              className={`rounded-xl md:rounded-2xl absolute left-1/2 -translate-x-1/2 ${feature.imgClasses}`}
             />
           </div>
         ))}

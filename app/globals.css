@@ -4,3 +4,61 @@
 html {
   overflow-x: hidden;
 }
+
+/* Шрифт Manrope применяется через className в layout.tsx */
+
+/* Swiper стили для Cases */
+.cases-swiper {
+  overflow: visible;
+}
+
+.cases-swiper .swiper-slide {
+  width: 768px !important;
+  max-width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.cases-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.cases-swiper .swiper-slide-active {
+  z-index: 1;
+}
+
+.cases-swiper .swiper-button-next,
+.cases-swiper .swiper-button-prev {
+  color: #5ab2ff;
+  width: 44px;
+  height: 44px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cases-swiper .swiper-button-next:after,
+.cases-swiper .swiper-button-prev:after {
+  font-size: 20px;
+}
+
+.cases-swiper .swiper-pagination-bullet {
+  background: #5ab2ff;
+  opacity: 0.3;
+}
+
+.cases-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Адаптивные стили для Cases */
+@media (max-width: 767px) {
+  .cases-swiper .swiper-slide {
+    width: 100% !important;
+  }
+
+  .cases-swiper .swiper-button-next,
+  .cases-swiper .swiper-button-prev {
+    display: none !important;
+  }
+}

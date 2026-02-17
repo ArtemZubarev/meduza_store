@@ -9,7 +9,7 @@ import Cases from "./components/Cases";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-[#f2f2f2] font-[var(--font-manrope)]">
+    <div className="flex flex-col justify-center items-center min-h-screen bg-[#f2f2f2]">
       {/* Hero Section */}
       <Hero />
       {/* About Section */}
