@@ -40,9 +40,9 @@ export default function Features() {
         {features.map((feature) => (
           <div
             key={feature.id}
-            className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-xl transition-shadow duration-300 relative pb-32 md:pb-50 overflow-hidden"
+            className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-xl transition-shadow duration-300 relative pb-32 md:pb-40 overflow-hidden"
           >
-            <h3 className="text-xl md:text-2xl font-bold text-[#181a1c] mb-3 md:mb-4 min-h-[3.5rem] md:min-h-[4.5rem] leading-tight">
+            <h3 className="text-xl md:text-2xl font-bold text-[#181a1c] mb-1 md:mb-1 min-h-[3.5rem] md:min-h-[4.5rem] leading-tight">
               {feature.title}
             </h3>
             <p className="text-sm md:text-base font-medium text-[#181a1c] mb-4 md:mb-6">

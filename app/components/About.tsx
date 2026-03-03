@@ -9,7 +9,7 @@ export default function About() {
           О нас
         </span>
       </div>
-      <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
+      <div className="grid lg:grid-cols-2 gap-8 md:gap-10 items-start">
         <div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8">
             <span className="text-[#181a1c]">Почему «Стор»?</span>

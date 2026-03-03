@@ -1,4 +1,4 @@
-import { ProcessStep } from "../constants";
+import { LayersIcon, PencilIcon, ProcessStep, TgLogo } from "../constants";
 
 export default function Process() {
   return (
@@ -20,7 +20,8 @@ export default function Process() {
           </h2>
           {/* CTA */}
           <div className="">
-            <button className="bg-gradient-to-r from-[#1572a1] to-[#27a6e6] px-6 md:px-12 py-3 md:py-5 rounded-full text-white font-semibold text-base md:text-lg hover:opacity-90 transition-opacity w-full md:w-auto">
+            <button className="relative bg-gradient-to-r from-[#1572a1] to-[#27a6e6] px-6 md:px-12 py-3 pl-22! md:py-5 rounded-3xl text-white font-semibold text-base md:text-lg hover:opacity-90 transition-opacity w-full md:w-auto cursor-pointer">
+              <TgLogo className="h-10 absolute left-3 top-3.5" />
               Бесплатный подсчёт
             </button>
           </div>
@@ -36,7 +37,9 @@ export default function Process() {
               </h3>
             </div>
 
-            <p className="text-lg md:text-xl font-bold text-white mb-2">Брифинг</p>
+            <p className="text-lg md:text-xl font-bold text-white mb-2">
+              Брифинг
+            </p>
             <p className="text-sm md:text-base text-white max-w-3xl">
               Вы формируете запрос. Это может быть ссылка на товар, одно фото,
               артикул, или просто описание идеи. Мы проводим глубокий анализ
@@ -57,7 +60,9 @@ export default function Process() {
               </h3>
             </div>
 
-            <p className="text-lg md:text-xl font-bold text-white mb-2">Скаутинг и КП</p>
+            <p className="text-lg md:text-xl font-bold text-white mb-2">
+              Скаутинг и КП
+            </p>
             <p className="text-sm md:text-base text-white max-w-3xl">
               Мы находим и верифицируем оптимальную фабрику/поставщика по вашим
               критериям. Исключаем посредников, получаем цены и только после
@@ -75,11 +80,13 @@ export default function Process() {
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#181a1c] mb-4 md:mb-6">
               Сделка полностью прозрачна
             </h3>
-            <div className="grid md:grid-cols-2 gap-4 md:gap-8 text-sm md:text-base text-[#181a1c] max-w-3xl">
-              <p className="font-medium">
+            <div className="flex gap-4 md:gap-8 text-sm md:text-base text-[#181a1c] max-w-3xl">
+              <p className="font-medium max-w-[206px]">
+                <PencilIcon className="h-12" />
                 Заключаем договор, согласовываем спецификацию
               </p>
-              <p className="font-medium">
+              <p className="font-medium max-w-[286px]">
+                <LayersIcon className="h-12" />
                 Оплата актуальными для Вас способами: безналичный расчет /
                 наличные в СПБ
               </p>

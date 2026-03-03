@@ -5,6 +5,7 @@ import {
   CaseIcon,
   LightningIcon,
   GroupIcon,
+  TgLogo,
 } from "../constants";
 
 export default function Services() {
@@ -14,7 +15,7 @@ export default function Services() {
       className="flex flex-col md:flex-row gap-6 md:gap-12 items-start w-full max-w-[1520px] mx-auto px-4 py-10 md:py-20"
     >
       <div className="flex-shrink-0">
-        <span className="bg-white px-4 md:px-6 py-3 md:py-5 rounded-2xl md:rounded-3xl text-sm md:text-base font-semibold">
+        <span className="block bg-white px-4 md:px-6 py-3 md:py-5 rounded-2xl md:rounded-3xl text-sm md:text-base font-semibold">
           Услуги
         </span>
       </div>
@@ -92,8 +93,8 @@ export default function Services() {
 
         {/* Service 6 - Дизайн под ключ */}
         <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-xl transition-shadow">
-          <div className="flex items-start justify-between mb-3 md:mb-4">
-            <span className="bg-[#5ab2ff] text-white text-xs md:text-sm px-3 md:px-4 py-1 rounded-full font-semibold">
+          <div className="flex items-center justify-between mb-3 md:mb-4">
+            <span className="block bg-[#5ab2ff] text-white text-xs md:text-sm px-3 md:px-4 py-1.5 rounded-full font-semibold">
               Новая услуга
             </span>
             <div>
@@ -110,10 +111,10 @@ export default function Services() {
         </div>
 
         {/* Service 7 - Спецзадачи и консалтинг */}
-        <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-xl transition-shadow sm:col-span-2 lg:col-span-3">
-          <div className="flex items-start gap-3 md:gap-4 mb-3 md:mb-4">
-            <GroupIcon className="w-10 h-10 md:w-12 md:h-12" />
-            <button className="cursor-pointer bg-gradient-to-r from-[#1572a1] to-[#27a6e6] px-6 md:px-8 py-2 md:py-3 rounded-full text-sm md:text-base text-white font-semibold hover:opacity-90 transition-opacity">
+        <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-xl transition-shadow ">
+          <div className="flex items-start gap-2 md:gap-2 mb-3 md:mb-4">
+            <TgLogo className="w-8 h-8 md:w-[34px] md:h-[34px]" />
+            <button className="cursor-pointer bg-gradient-to-r from-[#27a6e6] to-[#1572a1] px-3 md:px-4 py-1.5 rounded-full text-md md:text-base text-white font-semibold hover:opacity-90 transition-opacity">
               Связаться
             </button>
           </div>
