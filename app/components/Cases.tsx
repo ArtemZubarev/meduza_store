@@ -6,6 +6,9 @@ import type { SwiperOptions } from "swiper/types";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+const poolLogo = "/images/pool.png";
+const iceLogo = "/images/ice.png";
+const pearlLogo = "/images/pearl.png";
 
 interface CaseImage {
   src: string;
@@ -14,11 +17,12 @@ interface CaseImage {
 
 interface CaseData {
   id: string;
-  badge: {
+  badge?: {
     text: string;
     bgColor: string;
     textColor: string;
   };
+  badgeImg?: { src: string; width: string };
   title: string;
   product: string;
   description: string[];
@@ -29,11 +33,12 @@ interface CaseData {
 const casesData: CaseData[] = [
   {
     id: "case-1",
-    badge: {
-      text: "Для производства",
-      bgColor: "#f2f2f2",
-      textColor: "#181a1c",
-    },
+    // badge: {
+    //   text: "Для производства",
+    //   bgColor: "#f2f2f2",
+    //   textColor: "#181a1c",
+    // },
+    badgeImg: { src: poolLogo, width: "182px" },
     title: "Тепловые насосы",
     product: "Товар: тепловой насос инверторного типа.",
     description: [
@@ -58,6 +63,7 @@ const casesData: CaseData[] = [
       bgColor: "#5ab2ff",
       textColor: "white",
     },
+    badgeImg: { src: pearlLogo, width: "59px" },
     title: "Автономные системы Mastervolt",
     product: "Товар: Автономные системы электроснабжения Mastervolt.",
     description: [
@@ -102,11 +108,12 @@ const casesData: CaseData[] = [
   // Новые слайды из Figma - требуют заполнения данными
   {
     id: "case-4",
-    badge: {
-      text: "Бейдж",
-      bgColor: "#f2f2f2",
-      textColor: "#181a1c",
-    },
+    // badge: {
+    //   text: "Бейдж",
+    //   bgColor: "#f2f2f2",
+    //   textColor: "#181a1c",
+    // },
+    badgeImg: { src: iceLogo, width: "59px" },
     title: "Надувные купели и бассейны",
     product: "Товар: Надувные бассейны и купели по технологии SUP",
 
@@ -212,40 +219,68 @@ interface CaseCardProps {
 function CaseCard({ caseData }: CaseCardProps) {
   return (
     <div className="flex flex-col justify-between bg-white w-full rounded-2xl md:rounded-3xl p-4 md:p-8 h-full flex flex-col">
-      <div
-        className="px-4 py-2 md:px-6 md:py-3 rounded-xl md:rounded-2xl inline-block mb-4 md:mb-6"
-        style={{
-          backgroundColor: caseData.badge.bgColor,
-          color: caseData.badge.textColor,
-        }}
-      >
-        <span className="font-bold text-sm md:text-lg">
-          {caseData.badge.text}
-        </span>
+      <div>
+        <div className="flex items-center justify-start gap-4 w-full">
+          {caseData.badgeImg && (
+            <div className="">
+              <img
+                width={caseData.badgeImg.width}
+                src={caseData.badgeImg.src}
+              />
+            </div>
+          )}
+
+          {caseData.badge && (
+            <div className="">
+              <div
+                className={
+                  caseData.badge?.text === "Достали из Голландии"
+                    ? "px-4 py-1 rounded-full inline-block max-w-[192px] text-center border border-[rgba(90,178,255,1)]"
+                    : "px-4 py-2 md:px-6 md:py-3 rounded-xl md:rounded-2xl inline-block max-w-[182px] text-center"
+                }
+                style={
+                  caseData.badge?.text === "Достали из Голландии"
+                    ? {
+                        backgroundColor: "rgba(90,178,255,0.12)",
+                        color: "rgba(90,178,255,1)",
+                      }
+                    : {
+                        backgroundColor: caseData.badge?.bgColor,
+                        color: caseData.badge?.textColor,
+                      }
+                }
+              >
+                <span className="font-bold text-sm md:text-md">
+                  {caseData.badge?.text}
+                </span>
+              </div>
+            </div>
+          )}
+        </div>
+        <h3 className="text-2xl md:text-4xl font-bold text-[#181a1c] mb-4 md:mb-6 mt-4 md:mt-6">
+          {caseData.title}
+        </h3>
+        <p className="text-sm md:text-base font-medium text-[#181a1c] mb-4 md:mb-6">
+          {caseData.product}
+        </p>
+        <p className="text-sm md:text-base font-medium text-[#181a1c] mb-4 md:mb-6">
+          Что мы сделали:
+          <br />
+          {caseData.description.map((item, index) => (
+            <span key={index}>
+              - {item}
+              {index < caseData.description.length - 1 && <br />}
+            </span>
+          ))}
+        </p>
       </div>
-      <h3 className="text-2xl md:text-4xl font-bold text-[#181a1c] mb-4 md:mb-6">
-        {caseData.title}
-      </h3>
-      <p className="text-sm md:text-base font-medium text-[#181a1c] mb-4 md:mb-6">
-        {caseData.product}
-      </p>
-      <p className="text-sm md:text-base font-medium text-[#181a1c] mb-4 md:mb-6">
-        Что мы сделали:
-        <br />
-        {caseData.description.map((item, index) => (
-          <span key={index}>
-            - {item}
-            {index < caseData.description.length - 1 && <br />}
-          </span>
-        ))}
-      </p>
       <div className={`flex gap-3`}>
         {caseData.images.map((image, index) => (
           <img
             key={index}
             src={image.src}
             alt={image.alt}
-            className="w-full aspect-square object-cover rounded-xl md:rounded-2xl max-w-[146px] md:max-w-none md:w-[146px] md:h-[146px]"
+            className="aspect-square object-cover rounded-xl md:rounded-2xl w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] md:w-[146px] md:h-[146px]"
             width={146}
             height={146}
             loading="lazy"

@@ -1,4 +1,14 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { LayersIcon, PencilIcon, ProcessStep, TgLogo } from "../constants";
+
+const blockAnimation = {
+  initial: { opacity: 0.3, y: 32 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.15 },
+  transition: { duration: 0.5, ease: "easeOut" as const },
+};
 
 export default function Process() {
   return (
@@ -7,7 +17,7 @@ export default function Process() {
       className="w-full bg-[#181a1c] rounded-[40px] md:rounded-[70px] py-10 md:py-20 my-10 md:my-20"
     >
       <div className="w-full max-w-[1520px] grid lg:grid-cols-2 gap-6 md:gap-8 mx-auto px-4">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 lg:sticky lg:top-8 lg:self-start">
           <div className="flex items-center gap-4 mb-6 md:mb-[34px]">
             <span className="bg-[#404549] px-4 md:px-18 py-3 md:py-5 text-sm md:text-base font-semibold text-[#8c959d] rounded-2xl md:rounded-3xl">
               Процесс
@@ -29,7 +39,10 @@ export default function Process() {
 
         <div className="space-y-4 md:space-y-8">
           {/* Step 1 */}
-          <div className="bg-[#404549] rounded-[30px] md:rounded-[50px] p-6 md:p-12">
+          <motion.div
+            {...blockAnimation}
+            className="bg-[#404549] rounded-[30px] md:rounded-[50px] p-6 md:p-12"
+          >
             <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-[36px]">
               <ProcessStep step={1} />
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
@@ -49,10 +62,13 @@ export default function Process() {
               <span className="font-extrabold text-[#adff78]">Суть: </span>
               Мы превращаем ваш минимальный импульс в четкий запрос для рынка.
             </p>
-          </div>
+          </motion.div>
 
           {/* Step 2 */}
-          <div className="bg-[#404549] rounded-[30px] md:rounded-[50px] p-6 md:p-12">
+          <motion.div
+            {...blockAnimation}
+            className="bg-[#404549] rounded-[30px] md:rounded-[50px] p-6 md:p-12"
+          >
             <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-[36px]">
               <ProcessStep step={2} />
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
@@ -73,10 +89,13 @@ export default function Process() {
               <span className="font-extrabold text-[#adff78]">Суть: </span>
               Мы представляем вам досье на производителя и точную смету.
             </p>
-          </div>
+          </motion.div>
 
           {/* Step 3 */}
-          <div className="bg-[#f2f2f2] rounded-[30px] md:rounded-[50px] p-6 md:p-12">
+          <motion.div
+            {...blockAnimation}
+            className="bg-[#f2f2f2] rounded-[30px] md:rounded-[50px] p-6 md:p-12"
+          >
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#181a1c] mb-4 md:mb-6">
               Сделка полностью прозрачна
             </h3>
@@ -91,10 +110,13 @@ export default function Process() {
                 наличные в СПБ
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Step 4 */}
-          <div className="bg-[#404549] rounded-[30px] md:rounded-[50px] p-6 md:p-12">
+          <motion.div
+            {...blockAnimation}
+            className="bg-[#404549] rounded-[30px] md:rounded-[50px] p-6 md:p-12"
+          >
             <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-[36px]">
               <ProcessStep step={3} />
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
@@ -114,10 +136,13 @@ export default function Process() {
               <span className="font-extrabold text-[#adff78]">Суть: </span>
               Мы устраняем все риски между вашей оплатой и моментом отгрузки.
             </p>
-          </div>
+          </motion.div>
 
           {/* Step 5 */}
-          <div className="bg-[#404549] rounded-[30px] md:rounded-[50px] p-6 md:p-12">
+          <motion.div
+            {...blockAnimation}
+            className="bg-[#404549] rounded-[30px] md:rounded-[50px] p-6 md:p-12"
+          >
             <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-[36px]">
               <ProcessStep step={4} />
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
@@ -139,7 +164,7 @@ export default function Process() {
               <span className="font-extrabold text-[#adff78]">Суть: </span>
               Мы завершаем путь. Вы просто забираете готовый к работе актив.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

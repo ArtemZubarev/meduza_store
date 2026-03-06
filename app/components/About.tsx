@@ -1,3 +1,45 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
+const TYPEWRITER_TEXT = "Почему «Стор»?";
+
+function TypewriterText({ className }: { className?: string }) {
+  const [displayed, setDisplayed] = useState("");
+  const [started, setStarted] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setStarted(true); observer.disconnect(); } },
+      { threshold: 0.5 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!started) return;
+    let i = 0;
+    setDisplayed("");
+    const interval = setInterval(() => {
+      i++;
+      setDisplayed(TYPEWRITER_TEXT.slice(0, i));
+      if (i >= TYPEWRITER_TEXT.length) clearInterval(interval);
+    }, 60);
+    return () => clearInterval(interval);
+  }, [started]);
+
+  return (
+    <span ref={ref} className={className}>
+      {displayed}
+      {displayed.length < TYPEWRITER_TEXT.length && (
+        <span className="animate-pulse">|</span>
+      )}
+    </span>
+  );
+}
+
 export default function About() {
   return (
     <section
@@ -12,7 +54,7 @@ export default function About() {
       <div className="grid lg:grid-cols-2 gap-8 md:gap-10 items-start">
         <div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8">
-            <span className="text-[#181a1c]">Почему «Стор»?</span>
+            <TypewriterText className="text-[#181a1c]" />
             <br />
             <span className="text-[#ababab]">Вы же не магазин!</span>
           </h2>

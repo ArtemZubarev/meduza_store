@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { Logo, TgLogo } from "../constants";
 
 const navLinks = [
@@ -31,21 +32,30 @@ export default function Header() {
         {/* Логотип слева */}
         <div className="flex items-center">
           <Link className="hover:opacity-70 transition-opacity" href="/">
-            <Logo className="h-8 md:h-10" />
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ type: "spring", stiffness: 400, damping: 15, delay: 0.1 }}
+            >
+              <Logo className="h-8 md:h-10" />
+            </motion.div>
           </Link>
         </div>
 
         {/* Меню по центру - десктоп */}
         <div className="hidden lg:flex justify-center">
           <nav className="inline-flex items-center justify-center gap-6 xl:gap-8 text-sm xl:text-base font-semibold bg-white rounded-3xl px-8 xl:px-16 py-3 xl:py-4">
-            {navLinks.map((link) => (
-              <a
+            {navLinks.map((link, i) => (
+              <motion.a
                 key={link.href}
                 href={link.href}
                 className="hover:text-[#5ab2ff] transition-colors font-semibold whitespace-nowrap"
+                initial={{ opacity: 0, x: -16 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.25, delay: i * 0.06, ease: "easeOut" }}
               >
                 {link.label}
-              </a>
+              </motion.a>
             ))}
           </nav>
         </div>
@@ -58,7 +68,13 @@ export default function Header() {
             rel="noopener noreferrer"
             className="hidden sm:block hover:opacity-70 transition-opacity cursor-pointer"
           >
-            <TgLogo className="h-8 md:h-10 cursor-pointer" />
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ type: "spring", stiffness: 400, damping: 15, delay: 0.2 }}
+            >
+              <TgLogo className="h-8 md:h-10 cursor-pointer" />
+            </motion.div>
           </a>
           <button className="hidden sm:block bg-white px-4 md:px-8 py-2 md:py-4 rounded-2xl md:rounded-3xl text-sm md:text-base font-semibold hover:bg-[#5ab2ff] hover:text-white transition-colors cursor-pointer whitespace-nowrap">
             Контакты

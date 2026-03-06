@@ -1,17 +1,31 @@
+"use client";
+
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { CheckboxIcon } from "../constants";
 
 const imgHoreca = "/images/horeca.png";
 
 export default function Horeca() {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const xImg = useTransform(scrollYProgress, [0, 1], [30, -30]);
+
   return (
     <section
+      ref={sectionRef}
       id="horeca"
       className="bg-[#181a1c] w-full rounded-[40px] md:rounded-[70px] my-10 md:my-20 overflow-hidden"
     >
-      <div className="w-full mx-auto">
+      <div className="w-full mx-auto relative">
         <div className="grid max-w-[1520px] mx-auto lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
           <div className="flex flex-col justify-center py-10 md:py-20 px-4 md:px-10">
-            <div className="flex items-start gap-12">
+            <div className="md:flex items-start gap-12">
               <div className="flex items-center gap-4 mb-6 md:mb-8">
                 <span className="bg-white px-4 md:px-6 py-3 md:py-5 rounded-2xl md:rounded-3xl text-sm md:text-base font-semibold">
                   NEW
@@ -42,12 +56,12 @@ export default function Horeca() {
               </div>
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-[30px] md:rounded-[65px] h-[300px] md:h-full max-h-[662px]">
-            <img
+          <div className="overflow-hidden rounded-[30px] md:rounded-[65px] h-[260px] md:h-full max-h-[662px]">
+            <motion.img
               src={imgHoreca}
               alt="HoReCa оборудование"
-              className="w-full h-full object-cover object-center"
-              style={{ objectPosition: "center 60%" }}
+              style={{ x: xImg, objectPosition: "center 60%" }}
+              className="w-full h-full object-cover md:absolute md:top-0 md:right-0 md:w-auto"
             />
           </div>
         </div>

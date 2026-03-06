@@ -457,3 +457,360 @@ export const LayersIcon = ({ className }: { className?: string }) => (
     />
   </svg>
 );
+export const BossImg = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="144"
+    height="99"
+    viewBox="0 0 144 99"
+    fill="none"
+    className={className}
+  >
+    <rect
+      x="94.9805"
+      y="25.6938"
+      width="49.1378"
+      height="64.1231"
+      rx="5.40167"
+      transform="rotate(12.0642 94.9805 25.6938)"
+      fill="white"
+    />
+    <rect
+      x="98.9634"
+      y="32.0688"
+      width="38.6829"
+      height="2.78796"
+      rx="1.39398"
+      transform="rotate(12.0642 98.9634 32.0688)"
+      fill="#E6E6E6"
+    />
+    <rect
+      x="90.6597"
+      y="70.9194"
+      width="38.6829"
+      height="2.78796"
+      rx="1.39398"
+      transform="rotate(12.0642 90.6597 70.9194)"
+      fill="#E6E6E6"
+    />
+    <rect
+      x="95.1392"
+      y="49.9604"
+      width="38.6829"
+      height="2.78796"
+      rx="1.39398"
+      transform="rotate(12.0642 95.1392 49.9604)"
+      fill="#E6E6E6"
+    />
+    <rect
+      x="89.6401"
+      y="75.6904"
+      width="38.6829"
+      height="2.78796"
+      rx="1.39398"
+      transform="rotate(12.0642 89.6401 75.6904)"
+      fill="#E6E6E6"
+    />
+    <rect
+      x="94.1196"
+      y="54.7314"
+      width="38.6829"
+      height="2.78796"
+      rx="1.39398"
+      transform="rotate(12.0642 94.1196 54.7314)"
+      fill="#E6E6E6"
+    />
+    <rect
+      x="97.9436"
+      y="36.8398"
+      width="19.69"
+      height="2.78796"
+      rx="1.39398"
+      transform="rotate(12.0642 97.9436 36.8398)"
+      fill="#E6E6E6"
+    />
+    <rect
+      x="96.1592"
+      y="45.1895"
+      width="26.8341"
+      height="2.78796"
+      rx="1.39398"
+      transform="rotate(12.0642 96.1592 45.1895)"
+      fill="#E6E6E6"
+    />
+    <rect
+      x="93.0999"
+      y="59.5024"
+      width="8.01538"
+      height="2.78796"
+      rx="1.39398"
+      transform="rotate(12.0642 93.0999 59.5024)"
+      fill="#E6E6E6"
+    />
+    <rect
+      x="118.611"
+      y="86.8716"
+      width="8.01538"
+      height="2.78796"
+      rx="1.39398"
+      transform="rotate(12.0642 118.611 86.8716)"
+      fill="#E6E6E6"
+    />
+    <g filter="url(#filter0_d_100_683)">
+      <rect
+        x="57.0338"
+        y="10.5308"
+        width="57.8959"
+        height="75.5521"
+        rx="6.36445"
+        transform="rotate(6.86432 57.0338 10.5308)"
+        fill="white"
+      />
+      <rect
+        x="62.3883"
+        y="17.5854"
+        width="45.5776"
+        height="3.28488"
+        rx="1.64244"
+        transform="rotate(6.86432 62.3883 17.5854)"
+        fill="#E6E6E6"
+      />
+      <rect
+        x="56.7937"
+        y="64.0601"
+        width="45.5776"
+        height="3.28488"
+        rx="1.64244"
+        transform="rotate(6.86432 56.7937 64.0601)"
+        fill="#E6E6E6"
+      />
+      <rect
+        x="59.8118"
+        y="38.9878"
+        width="45.5776"
+        height="3.28488"
+        rx="1.64244"
+        transform="rotate(6.86432 59.8118 38.9878)"
+        fill="#E6E6E6"
+      />
+      <rect
+        x="56.1066"
+        y="69.7671"
+        width="45.5776"
+        height="3.28488"
+        rx="1.64244"
+        transform="rotate(6.86432 56.1066 69.7671)"
+        fill="#E6E6E6"
+      />
+      <rect
+        x="59.1248"
+        y="44.6953"
+        width="45.5776"
+        height="3.28488"
+        rx="1.64244"
+        transform="rotate(6.86432 59.1248 44.6953)"
+        fill="#E6E6E6"
+      />
+      <rect
+        x="61.7012"
+        y="23.293"
+        width="23.1994"
+        height="3.28488"
+        rx="1.64244"
+        transform="rotate(6.86432 61.7012 23.293)"
+        fill="#E6E6E6"
+      />
+      <rect
+        x="60.4988"
+        y="33.2808"
+        width="31.6169"
+        height="3.28488"
+        rx="1.64244"
+        transform="rotate(6.86432 60.4988 33.2808)"
+        fill="#E6E6E6"
+      />
+      <rect
+        x="58.4376"
+        y="50.4033"
+        width="9.44402"
+        height="3.28488"
+        rx="1.64244"
+        transform="rotate(6.86432 58.4376 50.4033)"
+        fill="#E6E6E6"
+      />
+      <rect
+        x="91.2942"
+        y="79.793"
+        width="9.44402"
+        height="3.28488"
+        rx="1.64244"
+        transform="rotate(6.86432 91.2942 79.793)"
+        fill="#E6E6E6"
+      />
+    </g>
+    <g filter="url(#filter1_d_100_683)">
+      <rect
+        x="74.3936"
+        y="87.5137"
+        width="64.1587"
+        height="83.7249"
+        rx="7.05291"
+        transform="rotate(175.624 74.3936 87.5137)"
+        fill="white"
+      />
+      <rect
+        x="67.0498"
+        y="81.0024"
+        width="50.5079"
+        height="3.64021"
+        rx="1.82011"
+        transform="rotate(175.624 67.0498 81.0024)"
+        fill="#E6E6E6"
+      />
+      <rect
+        x="63.0914"
+        y="29.2803"
+        width="50.5079"
+        height="3.64021"
+        rx="1.82011"
+        transform="rotate(175.624 63.0914 29.2803)"
+        fill="#E6E6E6"
+      />
+      <rect
+        x="65.2269"
+        y="57.1836"
+        width="50.5079"
+        height="3.64021"
+        rx="1.82011"
+        transform="rotate(175.624 65.2269 57.1836)"
+        fill="#E6E6E6"
+      />
+      <rect
+        x="62.6055"
+        y="22.9287"
+        width="50.5079"
+        height="3.64021"
+        rx="1.82011"
+        transform="rotate(175.624 62.6055 22.9287)"
+        fill="#E6E6E6"
+      />
+      <rect
+        x="64.7408"
+        y="50.8311"
+        width="50.5079"
+        height="3.64021"
+        rx="1.82011"
+        transform="rotate(175.624 64.7408 50.8311)"
+        fill="#E6E6E6"
+      />
+      <rect
+        x="66.5636"
+        y="74.6504"
+        width="25.709"
+        height="3.64021"
+        rx="1.82011"
+        transform="rotate(175.624 66.5636 74.6504)"
+        fill="#E6E6E6"
+      />
+      <rect
+        x="65.713"
+        y="63.5347"
+        width="35.037"
+        height="3.64021"
+        rx="1.82011"
+        transform="rotate(175.624 65.713 63.5347)"
+        fill="#E6E6E6"
+      />
+      <rect
+        x="64.2548"
+        y="44.4795"
+        width="10.4656"
+        height="3.64021"
+        rx="1.82011"
+        transform="rotate(175.624 64.2548 44.4795)"
+        fill="#E6E6E6"
+      />
+      <rect
+        x="22.1936"
+        y="19.6323"
+        width="10.4656"
+        height="3.64021"
+        rx="1.82011"
+        transform="rotate(175.624 22.1936 19.6323)"
+        fill="#E6E6E6"
+      />
+    </g>
+    <defs>
+      <filter
+        id="filter0_d_100_683"
+        x="44.3862"
+        y="6.91297"
+        width="73.7462"
+        height="89.1658"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset />
+        <feGaussianBlur stdDeviation="2.16607" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_100_683"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_100_683"
+          result="shape"
+        />
+      </filter>
+      <filter
+        id="filter1_d_100_683"
+        x="2.95639e-05"
+        y="2.95639e-05"
+        width="78.4265"
+        height="96.4423"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset />
+        <feGaussianBlur stdDeviation="2.27513" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_100_683"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_100_683"
+          result="shape"
+        />
+      </filter>
+    </defs>
+  </svg>
+);

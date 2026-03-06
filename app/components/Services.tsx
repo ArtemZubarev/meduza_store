@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import {
   SearchIcon,
   KeyIcon,
@@ -7,6 +10,18 @@ import {
   GroupIcon,
   TgLogo,
 } from "../constants";
+
+function ShakeIcon({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+  return (
+    <motion.div
+      className="inline-block"
+      animate={{ rotate: [0, -8, 8, -6, 6, -3, 3, 0] }}
+      transition={{ duration: 1.4, repeat: Infinity, repeatDelay: 2, delay, ease: [0.36, 0.07, 0.19, 0.97] }}
+    >
+      {children}
+    </motion.div>
+  );
+}
 
 export default function Services() {
   return (
@@ -24,7 +39,7 @@ export default function Services() {
         {/* Service 1 - Подбор товара по запросу */}
         <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-xl transition-shadow">
           <div className="mb-3 md:mb-4">
-            <SearchIcon className="w-8 h-8 md:w-[33px] md:h-[33px]" />
+            <ShakeIcon delay={0}><SearchIcon className="w-8 h-8 md:w-[33px] md:h-[33px]" /></ShakeIcon>
           </div>
           <h3 className="text-xl md:text-2xl font-bold text-[#181a1c] mb-3 md:mb-4">
             Подбор товара по запросу
@@ -38,7 +53,7 @@ export default function Services() {
         {/* Service 2 - Сделки под ключ */}
         <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-xl transition-shadow">
           <div className="mb-3 md:mb-4">
-            <KeyIcon className="w-8 h-8 md:w-[31px] md:h-[31px]" />
+            <ShakeIcon delay={0.6}><KeyIcon className="w-8 h-8 md:w-[31px] md:h-[31px]" /></ShakeIcon>
           </div>
           <h3 className="text-xl md:text-2xl font-bold text-[#181a1c] mb-3 md:mb-4">
             Сделки под ключ
@@ -52,7 +67,7 @@ export default function Services() {
         {/* Service 3 - Выезд на фабрику */}
         <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-xl transition-shadow">
           <div className="mb-3 md:mb-4">
-            <RocketIcon className="w-8 h-8 md:w-[35px] md:h-[35px]" />
+            <ShakeIcon delay={1.3}><RocketIcon className="w-8 h-8 md:w-[35px] md:h-[35px]" /></ShakeIcon>
           </div>
           <h3 className="text-xl md:text-2xl font-bold text-[#181a1c] mb-3 md:mb-4">
             Выезд на фабрику
@@ -66,7 +81,7 @@ export default function Services() {
         {/* Service 4 - Сопровождение в Китае */}
         <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-xl transition-shadow">
           <div className="mb-3 md:mb-4">
-            <CaseIcon className="w-8 h-8 md:w-[35px] md:h-[35px]" />
+            <ShakeIcon delay={0.9}><CaseIcon className="w-8 h-8 md:w-[35px] md:h-[35px]" /></ShakeIcon>
           </div>
           <h3 className="text-xl md:text-2xl font-bold text-[#181a1c] mb-3 md:mb-4">
             Сопровождение в Китае
@@ -80,7 +95,7 @@ export default function Services() {
         {/* Service 5 - Достаем невозможное */}
         <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-xl transition-shadow">
           <div className="mb-3 md:mb-4">
-            <LightningIcon className="w-5 h-7 md:w-[21px] md:h-[30px]" />
+            <ShakeIcon delay={0.3}><LightningIcon className="w-5 h-7 md:w-[21px] md:h-[30px]" /></ShakeIcon>
           </div>
           <h3 className="text-xl md:text-2xl font-bold text-[#181a1c] mb-3 md:mb-4">
             Достаем невозможное
@@ -98,7 +113,7 @@ export default function Services() {
               Новая услуга
             </span>
             <div>
-              <GroupIcon className="w-8 h-8 md:w-[34px] md:h-[34px]" />
+              <ShakeIcon delay={1.7}><GroupIcon className="w-8 h-8 md:w-[34px] md:h-[34px]" /></ShakeIcon>
             </div>
           </div>
           <h3 className="text-xl md:text-2xl font-bold text-[#181a1c] mb-3 md:mb-4">
@@ -113,7 +128,7 @@ export default function Services() {
         {/* Service 7 - Спецзадачи и консалтинг */}
         <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-xl transition-shadow ">
           <div className="flex items-start gap-2 md:gap-2 mb-3 md:mb-4">
-            <TgLogo className="w-8 h-8 md:w-[34px] md:h-[34px]" />
+            <ShakeIcon delay={1.1}><TgLogo className="w-8 h-8 md:w-[34px] md:h-[34px]" /></ShakeIcon>
             <button className="cursor-pointer bg-gradient-to-r from-[#27a6e6] to-[#1572a1] px-3 md:px-4 py-1.5 rounded-full text-md md:text-base text-white font-semibold hover:opacity-90 transition-opacity">
               Связаться
             </button>
