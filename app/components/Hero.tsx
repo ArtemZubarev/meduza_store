@@ -69,7 +69,7 @@ export default function Hero() {
           src={imgHero}
           style={{ y: yHero }}
           alt="Поставки из Китая"
-          className="relative z-0 w-full rounded-2xl md:rounded-3xl max-w-[450px] mx-auto"
+          className="relative z-0 w-full rounded-2xl md:rounded-3xl max-w-[450px] mx-auto md:min-h-[450px]"
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, ease: "easeOut", delay: 0.2 }}
