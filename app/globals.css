@@ -37,9 +37,9 @@ html {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.cases-swiper .swiper-button-next:after,
-.cases-swiper .swiper-button-prev:after {
-  font-size: 20px;
+.cases-swiper .swiper-button-next svg,
+.cases-swiper .swiper-button-prev svg {
+  height: 30px;
 }
 
 .cases-swiper .swiper-pagination-bullet {

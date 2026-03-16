@@ -3,8 +3,8 @@ import { BossImg, Logo, TgLogo } from "../constants";
 export default function Footer() {
   return (
     <footer className="bg-[#181a1c] rounded-t-[40px] md:rounded-t-[70px] mt-10 md:mt-20 py-8 md:py-16">
-      <div className="w-full max-w-[1520px] mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-12 mb-8 md:mb-12">
+      <div className="w-full max-w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1520px] mx-auto px-4">
+        <div className="flex flex-col lg:flex-row justify-between gap-8 md:gap-12 mb-8 md:mb-12">
           {/* Column 1 */}
           <div className="flex-shrink-0">
             <Logo className="h-8 md:h-10 mb-8 md:mb-[78px]" inverted />
@@ -28,27 +28,42 @@ export default function Footer() {
               </h4>
               <ul className="space-y-2 md:space-y-3">
                 <li>
-                  <a href="#" className="text-base md:text-xl text-[#404549] hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="text-base md:text-xl text-[#404549] hover:text-white transition-colors"
+                  >
                     Главная
                   </a>
                 </li>
                 <li>
-                  <a href="#about" className="text-base md:text-xl text-[#404549] hover:text-white transition-colors">
+                  <a
+                    href="#about"
+                    className="text-base md:text-xl text-[#404549] hover:text-white transition-colors"
+                  >
                     О нас
                   </a>
                 </li>
                 <li>
-                  <a href="#process" className="text-base md:text-xl text-[#404549] hover:text-white transition-colors">
+                  <a
+                    href="#process"
+                    className="text-base md:text-xl text-[#404549] hover:text-white transition-colors"
+                  >
                     Процесс
                   </a>
                 </li>
                 <li>
-                  <a href="#services" className="text-base md:text-xl text-[#404549] hover:text-white transition-colors">
+                  <a
+                    href="#services"
+                    className="text-base md:text-xl text-[#404549] hover:text-white transition-colors"
+                  >
                     Услуги
                   </a>
                 </li>
                 <li>
-                  <a href="#cases" className="text-base md:text-xl text-[#404549] hover:text-white transition-colors">
+                  <a
+                    href="#cases"
+                    className="text-base md:text-xl text-[#404549] hover:text-white transition-colors"
+                  >
                     Кейсы
                   </a>
                 </li>
@@ -62,12 +77,18 @@ export default function Footer() {
               </h4>
               <ul className="space-y-2 md:space-y-3">
                 <li>
-                  <a href="#design" className="text-base md:text-xl text-[#adff78] hover:text-white transition-colors">
+                  <a
+                    href="#design"
+                    className="text-base md:text-xl text-[#adff78] hover:text-white transition-colors"
+                  >
                     Дизайн
                   </a>
                 </li>
                 <li>
-                  <a href="#horeca" className="text-base md:text-xl text-[#5ab2ff] hover:text-white transition-colors">
+                  <a
+                    href="#horeca"
+                    className="text-base md:text-xl text-[#5ab2ff] hover:text-white transition-colors"
+                  >
                     HoReCa
                   </a>
                 </li>

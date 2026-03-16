@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { CheckboxIcon } from "../constants";
 
@@ -15,6 +15,15 @@ export default function Horeca() {
   });
 
   const xImg = useTransform(scrollYProgress, [0, 1], [30, -30]);
+  const [isMobile, setIsMobile] = useState(true);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    setIsMobile(mq.matches);
+    const handler = () => setIsMobile(mq.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
 
   return (
     <section
@@ -23,7 +32,7 @@ export default function Horeca() {
       className="bg-[#181a1c] w-full rounded-[40px] md:rounded-[70px] my-10 md:my-20 overflow-hidden"
     >
       <div className="w-full mx-auto relative">
-        <div className="grid max-w-[1520px] mx-auto lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
+        <div className="grid max-w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1520px] mx-auto lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
           <div className="flex flex-col justify-center py-10 md:py-20 px-4 md:px-10">
             <div className="md:flex items-start gap-12">
               <div className="flex items-center gap-4 mb-6 md:mb-8">
@@ -56,14 +65,17 @@ export default function Horeca() {
               </div>
             </div>
           </div>
-          <div className="overflow-hidden rounded-[30px] md:rounded-[65px] h-[260px] md:h-full max-h-[662px]">
-            <motion.img
+          <motion.div
+            style={{ x: isMobile ? 0 : xImg }}
+            className="relative overflow-hidden rounded-[30px] md:rounded-[65px] h-[220px] md:h-full max-h-[662px] min-h-0 -mt-8 md:mt-0"
+          >
+            <img
               src={imgHoreca}
               alt="HoReCa оборудование"
-              style={{ x: xImg, objectPosition: "center 60%" }}
-              className="w-full h-full object-cover md:absolute md:top-0 md:right-0 md:w-auto"
+              style={{ objectPosition: "center 60%" }}
+              className="w-full h-full object-cover object-center md:absolute md:top-0 md:right-0 md:w-auto md:h-full"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

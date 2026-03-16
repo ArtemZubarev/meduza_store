@@ -11,7 +11,7 @@ const features = [
     description:
       "Нулевой риск на старте. Мы инвестируем свое время, чтобы вы сэкономили свои деньги.",
     image: "/images/feature-free.png",
-    imgClasses: "max-w-[315px] ",
+    imgClasses: "max-w-[230px] -mt-5 md:mt-0 md:max-w-[315px]",
   },
   {
     id: "cargo",
@@ -19,7 +19,7 @@ const features = [
     description:
       "Мультиотраслевой охват. От 200 наушников до тяжелого промышленного оборудования.",
     image: "/images/feature-any-cargo.png",
-    imgClasses: "max-w-[359px] -bottom-7",
+    imgClasses: "max-w-[280px] md:max-w-[359px] -bottom-2 -md:bottom-7",
   },
   {
     id: "logistics",
@@ -27,7 +27,8 @@ const features = [
     description:
       "Выбирайте скорость или цену. Авиа, Ж/Д, море или авто. Оптимизация маршрута под ваш KPI.",
     image: "/images/feature-logistics.png",
-    imgClasses: "max-w-[568px] bottom-0 left-0",
+    imgClasses:
+      "max-w-[480px] md:max-w-[568px] -bottom-6 md:bottom-0 ml-5 md:ml-40 md:bottom-0 left-0 md:left-10 ",
   },
   {
     id: "transparent",
@@ -35,7 +36,7 @@ const features = [
     description:
       "Контроль 360°. Заключение сделки, фотоотчеты с фабрик и понятная смета без скрытых комиссий.",
     image: "/images/feature-transparent.png",
-    imgClasses: "max-w-[285px] -bottom-23",
+    imgClasses: "max-w-[220px] md:max-w-[285px] -bottom-19 md:-bottom-25",
   },
 ];
 
@@ -44,8 +45,11 @@ export default function Features() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="w-full max-w-[1520px] mx-auto px-4 py-8 md:py-10">
-      <div ref={ref} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+    <section className="w-full max-w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1520px] mx-auto px-4 py-8 md:py-10">
+      <div
+        ref={ref}
+        className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+      >
         {features.map((feature, i) => (
           <motion.div
             key={feature.id}

@@ -14,6 +14,10 @@ interface CaseImage {
   src: string;
   alt: string;
 }
+interface Badge {
+  text: string;
+  clases: string;
+}
 
 interface CaseData {
   id: string;
@@ -22,6 +26,7 @@ interface CaseData {
     bgColor: string;
     textColor: string;
   };
+  badges?: Badge[];
   badgeImg?: { src: string; width: string };
   title: string;
   product: string;
@@ -117,6 +122,17 @@ const casesData: CaseData[] = [
     title: "Надувные купели и бассейны",
     product: "Товар: Надувные бассейны и купели по технологии SUP",
 
+    badges: [
+      {
+        text: "Коллаб с ice-bath.ru",
+        clases: "bg-[#F2F2F2] text-black rounded-xl",
+      },
+      {
+        text: "Привезли > 200 бассейнов для физ лиц",
+        clases: "bg-[#51C663] text-white rounded-xl",
+      },
+    ],
+
     description: [
       "Выкупили товар под конкретный запрос.",
       "Провели контроль качества, отследили каждый этап производства.",
@@ -174,6 +190,12 @@ const casesData: CaseData[] = [
       "Подписание контракта и согласование деталей.",
       "Организовали логистику в более чем 12 городов России.",
     ],
+    badges: [
+      {
+        text: "Привезли > 20 мангалов для ИП и Юр лиц",
+        clases: "bg-[#51C663] text-white rounded-xl",
+      },
+    ],
     images: [
       {
         src: "/images/cases/6-1.jpg",
@@ -200,6 +222,12 @@ const casesData: CaseData[] = [
       "Сделали дополнительную упаковку для надежности.",
       "Организовали логистику в несколько регионов России.",
     ],
+    badges: [
+      {
+        text: "Привезли > 30 аппаратов и 50 000 контейнеров для ИП и Юр лиц",
+        clases: "bg-[#51C663] text-white rounded-xl",
+      },
+    ],
     images: [
       {
         src: "/images/cases/7-1.jpg",
@@ -207,6 +235,7 @@ const casesData: CaseData[] = [
       },
       { src: "/images/cases/7-2.jpg", alt: "" },
       { src: "/images/cases/7-3.jpg", alt: "" },
+      { src: "/images/cases/7-4.jpg", alt: "" },
     ],
     gridCols: 3,
   },
@@ -274,6 +303,21 @@ function CaseCard({ caseData }: CaseCardProps) {
           ))}
         </p>
       </div>
+      {caseData.badges && (
+        <div className={`flex flex-col md:flex-row gap-3`}>
+          {caseData.badges.map((badge, index) => (
+            <div
+              key={index}
+              className={
+                badge.clases +
+                " px-4 py-2 font-semibold text-[14px] md:text-[16px] md:px-7 md:py-4"
+              }
+            >
+              {badge.text}
+            </div>
+          ))}
+        </div>
+      )}
       <div className={`flex gap-3`}>
         {caseData.images.map((image, index) => (
           <img
@@ -296,6 +340,7 @@ const swiperConfig: SwiperOptions = {
   spaceBetween: 32,
   slidesPerView: "auto",
   centeredSlides: false,
+  navigation: true,
   pagination: {
     clickable: true,
     dynamicBullets: true,

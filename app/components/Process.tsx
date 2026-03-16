@@ -16,22 +16,22 @@ export default function Process() {
       id="process"
       className="w-full bg-[#181a1c] rounded-[40px] md:rounded-[70px] py-10 md:py-20 my-10 md:my-20"
     >
-      <div className="w-full max-w-[1520px] grid lg:grid-cols-2 gap-6 md:gap-8 mx-auto px-4">
+      <div className="w-full max-w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1520px] grid lg:grid-cols-2 gap-6 md:gap-8 mx-auto px-4">
         <div className="flex flex-col gap-4 lg:sticky lg:top-8 lg:self-start">
-          <div className="flex items-center gap-4 mb-6 md:mb-[34px]">
+          <div className="flex items-center gap-4 mb-0 md:mb-[34px]">
             <span className="bg-[#404549] px-4 md:px-18 py-3 md:py-5 text-sm md:text-base font-semibold text-[#8c959d] rounded-2xl md:rounded-3xl">
               Процесс
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 md:mb-[90px]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 md:mb-[90px]">
             <span className="text-[#404549]">Как мы работаем:</span>
             <br />
             <span className="text-white">алгоритм успеха</span>
           </h2>
           {/* CTA */}
           <div className="">
-            <button className="relative bg-gradient-to-r from-[#1572a1] to-[#27a6e6] px-6 md:px-12 py-3 pl-22! md:py-5 rounded-3xl text-white font-semibold text-base md:text-lg hover:opacity-90 transition-opacity w-full md:w-auto cursor-pointer">
-              <TgLogo className="h-10 absolute left-3 top-3.5" />
+            <button className="relative bg-gradient-to-r from-[#1572a1] to-[#27a6e6] px-6 md:px-12 py-3 pl-12 md:pl-22! md:py-5 rounded-3xl text-white font-semibold text-base md:text-lg hover:opacity-90 transition-opacity w-full md:w-auto cursor-pointer">
+              <TgLogo className="h-10 absolute top-1 left-3 md:left-3 md:top-3.5" />
               Бесплатный подсчёт
             </button>
           </div>

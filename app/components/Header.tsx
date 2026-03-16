@@ -27,15 +27,20 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full max-w-[1520px] mx-auto px-4 py-4 md:py-6 mt-4 md:mt-8">
-      <div className="grid grid-cols-[auto_1fr_auto] items-center gap-4 md:gap-8">
+    <header className="w-full max-w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1520px] mx-auto px-4 py-4 md:py-6 mt-4 md:mt-8">
+      <div className="grid grid-cols-[auto_1fr_auto] items-center gap-4 xl:gap-8">
         {/* Логотип слева */}
         <div className="flex items-center">
           <Link className="hover:opacity-70 transition-opacity" href="/">
             <motion.div
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ type: "spring", stiffness: 400, damping: 15, delay: 0.1 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 15,
+                delay: 0.1,
+              }}
             >
               <Logo className="h-8 md:h-10" />
             </motion.div>
@@ -52,7 +57,11 @@ export default function Header() {
                 className="hover:text-[#5ab2ff] transition-colors font-semibold whitespace-nowrap"
                 initial={{ opacity: 0, x: -16 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.25, delay: i * 0.06, ease: "easeOut" }}
+                transition={{
+                  duration: 0.25,
+                  delay: i * 0.06,
+                  ease: "easeOut",
+                }}
               >
                 {link.label}
               </motion.a>
@@ -71,7 +80,12 @@ export default function Header() {
             <motion.div
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ type: "spring", stiffness: 400, damping: 15, delay: 0.2 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 15,
+                delay: 0.2,
+              }}
             >
               <TgLogo className="h-8 md:h-10 cursor-pointer" />
             </motion.div>
