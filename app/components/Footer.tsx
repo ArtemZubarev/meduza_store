@@ -9,14 +9,21 @@ export default function Footer() {
           <div className="flex-shrink-0">
             <Logo className="h-8 md:h-10 mb-8 md:mb-[78px]" inverted />
             <p className="text-base md:text-xl text-white mb-2">с 10-18</p>
-            <p className="text-2xl md:text-4xl font-bold text-white mb-4 md:mb-7">
+            <a
+              href="tel:+78129980278"
+              className="text-2xl md:text-4xl font-bold text-white mb-4 md:mb-7 hover:opacity-80 transition-opacity"
+            >
               +7 812 998 02 78
-            </p>
+            </a>
             <p className="text-base md:text-xl text-white mb-2">с 10-20</p>
-            <p className="text-2xl md:text-4xl font-bold text-white">
+            <a
+              target="_blank"
+              href="https://t.me/meduzamen"
+              className="text-2xl md:text-4xl font-bold text-white hover:opacity-80 transition-opacity"
+            >
               <TgLogo className="h-6 md:h-8 inline-block -ml-2" />
               @meduzamen
-            </p>
+            </a>
           </div>
 
           {/* Columns 2 + 3 grouped on mobile */}
@@ -147,9 +154,13 @@ export default function Footer() {
               ИП Васенин Сергей Станиславович / ИНН 434586016397 / ОГРНИП
               324430000003612
             </p>
-            <button className="bg-white px-6 md:px-8 py-3 md:py-4 rounded-full text-sm md:text-base text-[#181a1c] font-semibold hover:bg-[#5ab2ff] hover:text-white transition-colors w-full md:w-auto">
+            <a
+              target="_blank"
+              href="https://t.me/meduzamen"
+              className="bg-white px-6 md:px-8 py-3 md:py-4 rounded-full text-sm md:text-base text-[#181a1c] font-semibold hover:bg-[#5ab2ff] hover:text-white transition-colors w-full md:w-auto"
+            >
               Бесплатная консультация
-            </button>
+            </a>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-8 text-sm md:text-md text-white">
             <a

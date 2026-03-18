@@ -58,7 +58,7 @@ export default function Features() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.4, delay: i * 0.1, ease: "easeOut" }}
           >
-            <h3 className="text-xl md:text-2xl font-bold text-[#181a1c] mb-1 md:mb-1 min-h-[3.5rem] md:min-h-[4.5rem] leading-tight">
+            <h3 className="text-xl md:text-2xl font-bold text-[#181a1c] mb-1 md:mb-1 min-h-[2.5rem] md:min-h-[4.5rem] leading-tight">
               {feature.title}
             </h3>
             <p className="text-sm md:text-base font-medium text-[#181a1c] mb-4 md:mb-6">

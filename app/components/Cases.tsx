@@ -363,7 +363,7 @@ const swiperConfig: SwiperOptions = {
 
 export default function Cases() {
   return (
-    <section id="cases" className="w-full mx-auto px-4 py-10 md:py-20">
+    <section id="cases" className="w-full mx-auto px-4 py-4 md:py-20">
       <Swiper {...swiperConfig} className="cases-swiper !pb-12">
         {casesData.map((caseData) => (
           <SwiperSlide key={caseData.id} className="!w-[768px] h-auto">

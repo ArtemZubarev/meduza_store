@@ -28,7 +28,7 @@ export default function Header() {
 
   return (
     <header className="w-full max-w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1520px] mx-auto px-4 py-4 md:py-6 mt-4 md:mt-8">
-      <div className="grid grid-cols-[auto_1fr_auto] items-center gap-4 xl:gap-8">
+      <div className="grid grid-cols-[auto_1fr_auto] items-center gap-0 md:gap-4 xl:gap-8">
         {/* Логотип слева */}
         <div className="flex items-center">
           <Link className="hover:opacity-70 transition-opacity" href="/">
@@ -42,7 +42,7 @@ export default function Header() {
                 delay: 0.1,
               }}
             >
-              <Logo className="h-8 md:h-10" />
+              <Logo className="h-8 md:h-10 -ml-6 md:-ml-0" />
             </motion.div>
           </Link>
         </div>
@@ -72,7 +72,7 @@ export default function Header() {
         {/* Кнопка контактов справа */}
         <div className="flex items-center justify-end gap-2">
           <a
-            href="https://t.me/xvasyax"
+            href="https://t.me/meduzamen"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:block hover:opacity-70 transition-opacity cursor-pointer"
@@ -138,7 +138,7 @@ export default function Header() {
               </a>
             ))}
             <div className="flex items-center gap-4 pt-4 border-t border-gray-200">
-              <a
+              {/* <a
                 href="https://t.me/xvasyax"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -146,7 +146,7 @@ export default function Header() {
                 className="hover:opacity-70 transition-opacity"
               >
                 <TgLogo className="h-8" />
-              </a>
+              </a> */}
               <button
                 onClick={closeMenu}
                 className="bg-[#5ab2ff] text-white px-6 py-3 rounded-2xl font-medium hover:bg-[#4a9ee6] transition-colors"
