@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 const poolLogo = "/images/pool.png";
 const iceLogo = "/images/ice.png";
 const pearlLogo = "/images/pearl.png";
+const clampsLogo = "/images/clamps.png";
 
 interface CaseImage {
   src: string;
@@ -236,6 +237,61 @@ const casesData: CaseData[] = [
       { src: "/images/cases/7-2.jpg", alt: "" },
       { src: "/images/cases/7-3.jpg", alt: "" },
       { src: "/images/cases/7-4.jpg", alt: "" },
+    ],
+    gridCols: 3,
+  },
+  {
+    id: "case-8",
+    badge: {
+      text: "Для бизнеса",
+      bgColor: "#f2f2f2",
+      textColor: "#181a1c",
+    },
+    title: "Вытяжка с электрофильтром",
+    product: "Товар: Вытяжка с системой электрофильтрации.",
+    description: [
+      "Нашли и проверили производителя.",
+      "Выкупили товар и провели контроль качества.",
+      "Сделали дополнительную упаковку для надежности.",
+      "Организовали логистику в 5 регионов России.",
+    ],
+    badges: [
+      {
+        text: "Привезли > 15 вытяжек для ИП и Юр лиц",
+        clases: "bg-[#51C663] text-white rounded-xl",
+      },
+    ],
+    images: [
+      {
+        src: "/images/cases/8-1.jpg",
+        alt: "",
+      },
+      { src: "/images/cases/8-2.jpg", alt: "" },
+      { src: "/images/cases/8-3.jpg", alt: "" },
+    ],
+    gridCols: 3,
+  },
+  {
+    id: "case-9",
+    // badge: {
+    //   text: "Для производства",
+    //   bgColor: "#f2f2f2",
+    //   textColor: "#181a1c",
+    // },
+    badgeImg: { src: clampsLogo, width: "140px" },
+    title: "Партия посуды для ресторана",
+    product: "Товар: 7 тонн посуды разного типа и калибра",
+    description: [
+      "По одной фотографии вывески нашли оригинального производителя и вышли на прямой контакт с фабрикой.",
+      "Заключили официальный контракт и проработали техническую спецификацию продукта.",
+      "Провели все платежи полностью в белую.",
+      "Организовали серийное производство и запустили выпуск продукции на фабрике.",
+      "Продолжаем регулярный контроль качества, чтобы каждая партия соответствовала стандартам.",
+    ],
+    images: [
+      { src: "/images/cases/9-1.jpg", alt: "Посуда 1" },
+      { src: "/images/cases/9-2.jpg", alt: "Посуда 2" },
+      { src: "/images/cases/9-3.jpg", alt: "Посуда 3" },
     ],
     gridCols: 3,
   },
