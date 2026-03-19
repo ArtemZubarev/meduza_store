@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { CheckboxIcon } from "../constants";
+import Link from "next/link";
 
 const imgHoreca = "/images/horeca.png";
 
@@ -54,14 +55,16 @@ export default function Horeca() {
                 <div className="flex items-start gap-2 max-w-[500px] mb-6 md:mb-8">
                   <CheckboxIcon className="w-5 h-5 md:w-[22px] md:h-[22px] mt-0.5 flex-shrink-0" />
                   <p className="text-sm md:text-base font-medium text-[#adff78]">
-                    Благодаря этим соглашениям мы получили доступ{" "}
-                    <br className="hidden sm:block" /> к лучшему оборудованию
-                    мирового уровня.
+                    Благодаря этим соглашениям мы получили доступ к лучшему
+                    оборудованию мирового уровня.
                   </p>
                 </div>
-                <button className="w-full md:max-w-[222px] cursor-pointer bg-white px-6 md:px-8 py-3 md:py-4 rounded-2xl md:rounded-3xl text-sm md:text-base text-[#181a1c] font-semibold hover:bg-[#5ab2ff] hover:text-white transition-colors">
+                <a
+                  href="/coming-soon"
+                  className="w-full md:max-w-[222px] cursor-pointer bg-white px-6 md:px-8 py-3 md:py-4 rounded-2xl md:rounded-3xl text-sm md:text-base text-[#181a1c] font-semibold hover:bg-[#5ab2ff] hover:text-white transition-colors"
+                >
                   Перейти в каталог
-                </button>
+                </a>
               </div>
             </div>
           </div>

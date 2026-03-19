@@ -6,6 +6,7 @@ import type { SwiperOptions } from "swiper/types";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { ClampsLogo } from "../constants";
 const poolLogo = "/images/pool.png";
 const iceLogo = "/images/ice.png";
 const pearlLogo = "/images/pearl.png";
@@ -28,7 +29,9 @@ interface CaseData {
     textColor: string;
   };
   badges?: Badge[];
-  badgeImg?: { src: string; width: string };
+  badgeImg?:
+    | { src: string; width: string }
+    | { src: React.ComponentType<{ className?: string }>; width: string; type: "react" };
   title: string;
   product: string;
   description: string[];
@@ -278,7 +281,7 @@ const casesData: CaseData[] = [
     //   bgColor: "#f2f2f2",
     //   textColor: "#181a1c",
     // },
-    badgeImg: { src: clampsLogo, width: "140px" },
+    badgeImg: { src: ClampsLogo, width: "140px", type: "react" },
     title: "Партия посуды для ресторана",
     product: "Товар: 7 тонн посуды разного типа и калибра",
     description: [
@@ -306,14 +309,25 @@ function CaseCard({ caseData }: CaseCardProps) {
     <div className="flex flex-col justify-between bg-white w-full rounded-2xl md:rounded-3xl p-4 md:p-8 h-full flex flex-col">
       <div>
         <div className="flex items-center justify-start gap-4 w-full">
-          {caseData.badgeImg && (
-            <div className="">
-              <img
-                width={caseData.badgeImg.width}
-                src={caseData.badgeImg.src}
-              />
-            </div>
-          )}
+          {caseData.badgeImg &&
+            ("type" in caseData.badgeImg && caseData.badgeImg.type === "react" ? (
+              <div className="">
+                <ClampsLogo className="w-[140px] h-[40px]" />
+              </div>
+            ) : (
+              <div className="">
+                <img
+                  width={caseData.badgeImg.width}
+                  src={
+                  !("type" in caseData.badgeImg)
+                    ? caseData.badgeImg.src
+                    : ""
+                }
+                  alt=""
+                />
+              </div>
+            ))}
+          
 
           {caseData.badge && (
             <div className="">

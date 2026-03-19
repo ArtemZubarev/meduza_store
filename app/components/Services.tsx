@@ -131,7 +131,7 @@ export default function Services() {
         {/* Service 6 - Дизайн под ключ */}
         <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-xl transition-shadow">
           <div className="flex items-center justify-between mb-3 md:mb-4">
-            <span className="block bg-[#5ab2ff] text-white text-xs md:text-sm px-3 md:px-4 py-1.5 rounded-full font-semibold">
+            <span className="block bg-[#5ab2ff] text-white  px-3 md:px-4 py-1.5 rounded-full font-semibold text-md">
               Новая услуга
             </span>
             <div>

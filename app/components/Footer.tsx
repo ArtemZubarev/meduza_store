@@ -8,14 +8,16 @@ export default function Footer() {
           {/* Column 1 */}
           <div className="flex-shrink-0">
             <Logo className="h-8 md:h-10 mb-8 md:mb-[78px]" inverted />
-            <p className="text-base md:text-xl text-white mb-2">с 10-18</p>
+            <p className="text-base md:text-xl text-white md:mb-2">с 10-18</p>
             <a
               href="tel:+78129980278"
               className="text-2xl md:text-4xl font-bold text-white mb-4 md:mb-7 hover:opacity-80 transition-opacity"
             >
               +7 812 998 02 78
             </a>
-            <p className="text-base md:text-xl text-white mb-2">с 10-20</p>
+            <p className="text-base md:text-xl text-white md:mb-2 mt-6">
+              с 10-20
+            </p>
             <a
               target="_blank"
               href="https://t.me/meduzamen"
@@ -85,7 +87,7 @@ export default function Footer() {
               <ul className="space-y-2 md:space-y-3">
                 <li>
                   <a
-                    href="#design"
+                    href="/coming-soon"
                     className="text-base md:text-xl text-[#adff78] hover:text-white transition-colors"
                   >
                     Дизайн
@@ -112,9 +114,13 @@ export default function Footer() {
                   <br />
                   для своего босса
                 </h4>
-                <button className="bg-[#5ab2ff] px-6 md:px-8 py-2 md:py-3 rounded-full text-sm md:text-base text-white font-semibold hover:opacity-90 transition-opacity w-full md:w-auto">
+                <a
+                  href="/meduzastore_presentation.pdf"
+                  target="_blank"
+                  className="bg-[#5ab2ff] px-6 md:px-8 py-2 md:py-3 rounded-full text-sm md:text-base text-white font-semibold hover:opacity-90 transition-opacity w-full md:w-auto"
+                >
                   Скачать
-                </button>
+                </a>
               </div>
               <div>
                 <BossImg className="max-w-[139px]" />
@@ -164,13 +170,13 @@ export default function Footer() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-8 text-sm md:text-md text-white">
             <a
-              href="#"
+              href="/consent"
               className="underline hover:text-[#5ab2ff] transition-colors"
             >
               Согласие на обработку данных
             </a>
             <a
-              href="#"
+              href="/privacy"
               className="underline hover:text-[#5ab2ff] transition-colors"
             >
               Политика конфиденциальности

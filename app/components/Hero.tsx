@@ -21,7 +21,7 @@ export default function Hero() {
   const yHero = useTransform(scrollYProgress, [0, 1], [0, 40]);
 
   return (
-    <section className="w-full max-w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1520px] mx-auto px-4 py-10 md:py-20 text-center overflow-hidden">
+    <section className="w-full max-w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1520px] mx-auto px-4 pb-0 pt-10 md:pt-20 md:pb-20 text-center overflow-hidden">
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-8 leading-[32px] md:leading-tight">
         <span className="text-[#181a1c] md:pr-2">Поставки из </span>
         <span className="text-[#181a1c]">
@@ -68,7 +68,7 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
         />
         <motion.div
-          className="relative z-100 w-full max-w-[450px] mx-auto min-h-[280px] md:min-h-[450px]"
+          className="relative z-100 w-full max-w-[450px] md:max-w-[650px] mx-auto min-h-[280px] md:min-h-[450px]"
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, ease: "easeOut", delay: 0.2 }}

@@ -33,7 +33,7 @@ export default function Process() {
             <a
               target="_blank"
               href="https://t.me/meduzamen"
-              className="inline-block relative bg-gradient-to-r from-[#1572a1] to-[#27a6e6] px-6 md:px-12 py-3 pl-12 md:pl-22! md:py-5 rounded-3xl text-white font-semibold text-base md:text-lg hover:opacity-90 transition-opacity w-full md:w-auto cursor-pointer"
+              className="inline-block relative bg-gradient-to-r from-[#1572a1] to-[#27a6e6] px-6 md:px-12 py-3 md:pl-22! md:py-5 rounded-3xl text-white font-semibold text-center md:text-left md:text-lg hover:opacity-90 transition-opacity w-full md:w-auto cursor-pointer"
             >
               <TgLogo className="h-10 absolute top-1 left-3 md:left-3 md:top-3.5" />
               Бесплатный подсчёт

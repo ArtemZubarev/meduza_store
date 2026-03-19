@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 import { Logo, TgLogo } from "../constants";
 
 const navLinks = [
-  { href: "#", label: "Главная" },
-  { href: "#about", label: "О нас" },
-  { href: "#process", label: "Процесс" },
-  { href: "#services", label: "Услуги" },
-  { href: "#cases", label: "Кейсы" },
-  { href: "#horeca", label: "HoReСa" },
-  { href: "#design", label: "Дизайн" },
+  { href: "/", label: "Главная" },
+  { href: "/#about", label: "О нас" },
+  { href: "/#process", label: "Процесс" },
+  { href: "/#services", label: "Услуги" },
+  { href: "/#cases", label: "Кейсы" },
+  { href: "/#horeca", label: "HoReСa" },
+  { href: "/coming-soon", label: "Дизайн" },
 ];
 
 export default function Header() {
@@ -72,7 +72,7 @@ export default function Header() {
         {/* Кнопка контактов справа */}
         <div className="flex items-center justify-end gap-2">
           <a
-            href="https://t.me/meduzamen"
+            href="https://t.me/meduzastor"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:block hover:opacity-70 transition-opacity cursor-pointer"

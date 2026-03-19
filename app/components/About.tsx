@@ -49,7 +49,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="w-full max-w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1520px] flex flex-col md:flex-row gap-6 md:gap-12 mx-auto px-4 py-10 md:py-20"
+      className="w-full max-w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1520px] flex flex-col md:flex-row gap-6 md:gap-12 mx-auto px-4 pb-10 pt-4 md:pb-20 md:pt-20"
     >
       <div className="flex-shrink-0">
         <span className="inline-flex min-w-[100px] justify-center bg-white px-4 md:px-6 py-3 md:py-5 rounded-2xl md:rounded-3xl text-sm md:text-base text-center font-semibold mt-2">
