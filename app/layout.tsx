@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   title: "MeduzaStore - Поставки из Китая",
   description:
     "Единое окно для вашего бизнеса и частных запросов. Найдем, проверим, доставим.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -23,9 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body
-        className={`${manrope.className} antialiased bg-[#f2f2f2]`}
-      >
+      <body className={`${manrope.className} antialiased bg-[#f2f2f2]`}>
         <Header />
         {children}
         <Footer />

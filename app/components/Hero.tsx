@@ -61,7 +61,7 @@ export default function Hero() {
         />
         <motion.img
           src={imgSearch}
-          className=" md:block absolute bottom-0 scale-75 md:scale-100 md:bottom-10 -left-10 md:left-0 rounded-2xl md:rounded-3xl max-w-[200px] md:max-w-[333px] z-10"
+          className=" md:block absolute -bottom-6 scale-75 md:scale-100 md:bottom-10 -left-10 md:left-0 rounded-2xl md:rounded-3xl max-w-[200px] md:max-w-[333px] z-10"
           alt=""
           initial={{ opacity: 0, x: -80 }}
           animate={{ opacity: 1, x: 0 }}
