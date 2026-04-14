@@ -415,6 +415,35 @@ export const BigCheckbox = ({ className }: { className?: string }) => (
     </defs>
   </svg>
 );
+export const CircleCheck = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="25"
+    height="25"
+    viewBox="0 0 25 25"
+    fill="none"
+  >
+    className={className}
+    <g clipPath="url(#clip0_102_1252)">
+      <path
+        d="M21.3388 21.3388C26.2203 16.4573 26.2203 8.54272 21.3388 3.66117C16.4572 -1.22039 8.54265 -1.22039 3.6611 3.66117C-1.22045 8.54272 -1.22045 16.4573 3.6611 21.3388C8.54265 26.2204 16.4572 26.2204 21.3388 21.3388Z"
+        fill="#51C663"
+      />
+      <path
+        d="M7.25691 12.3879L10.7295 15.8605L17.6746 8.91532"
+        stroke="white"
+        strokeWidth="1.81422"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_102_1252">
+        <rect width="25" height="25" fill="white" />
+      </clipPath>
+    </defs>
+  </svg>
+);
 
 export const PencilIcon = ({ className }: { className?: string }) => (
   <svg

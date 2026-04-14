@@ -11,7 +11,7 @@ const navLinks = [
   { href: "/#process", label: "Процесс" },
   { href: "/#services", label: "Услуги" },
   { href: "/#cases", label: "Кейсы" },
-  { href: "/#horeca", label: "HoReСa" },
+  { href: "/horeca", label: "HoReСa" },
   { href: "/coming-soon", label: "Дизайн" },
 ];
 

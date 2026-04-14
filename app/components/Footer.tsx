@@ -95,7 +95,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#horeca"
+                    href="/horeca"
                     className="text-base md:text-xl text-[#5ab2ff] hover:text-white transition-colors"
                   >
                     HoReCa
