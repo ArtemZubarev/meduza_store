@@ -210,7 +210,7 @@ function ProductCard({ item }: { item: ProductItem }) {
 function PromoCard({ item }: { item: PromoItem }) {
   return (
     <article
-      className="flex h-full min-h-0 w-full flex-col overflow-hidden rounded-2xl shadow-sm md:rounded-3xl"
+      className="flex h-full min-h-0 w-full flex-col rounded-2xl shadow-sm md:rounded-3xl"
       style={{
         background:
           item.id === "4"
@@ -218,27 +218,26 @@ function PromoCard({ item }: { item: PromoItem }) {
             : "#181a1c",
       }}
     >
-      {/* Та же высота, что у блока с фото в ProductCard — выравнивание по Y */}
-      {/* <div
-        className="h-[260px] w-full shrink-0 sm:h-[280px] md:h-[300px]"
-        aria-hidden
-      /> */}
-      <img
-        src={imgHoreca}
-        alt="Horeca"
-        className="w-full h-full object-cover max-h-[260px]"
-      />
-      <div className="flex min-h-0 flex-1 flex-col gap-2 p-4 md:p-6">
+      {item.id === "10" ? (
+        <div className="w-full shrink-0 overflow-hidden rounded-t-2xl md:rounded-t-3xl">
+          <img
+            src={imgHoreca}
+            alt="Horeca"
+            className="h-[200px] w-full object-cover sm:h-[230px] md:h-[260px]"
+          />
+        </div>
+      ) : null}
+      <div className="flex min-h-min flex-1 flex-col gap-2 p-4 pb-5 md:p-6 md:pb-6">
         <h3 className="line-clamp-3 min-h-[3.25rem] text-xl leading-snug font-bold text-white md:min-h-[3.5rem] md:text-2xl">
           {item.title}
         </h3>
         <p className="line-clamp-5 min-h-[7.5rem] flex-1 text-sm leading-snug font-medium text-[#fff] md:min-h-[8rem] md:text-base">
           {item.body}
         </p>
-        <div className="mt-auto flex gap-2 pt-1">
+        <div className="mt-auto flex shrink-0 gap-2 pt-1">
           <button
             type="button"
-            className="min-h-11 w-full cursor-pointer rounded-2xl bg-[#5ab2ff] px-6 py-4 text-center text-sm font-semibold text-white transition-colors hover:bg-[#4a9ee6] md:rounded-3xl md:px-8"
+            className="min-h-11 w-full cursor-pointer rounded-2xl bg-[#5ab2ff] px-6 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-[#4a9ee6] sm:py-4 md:rounded-3xl md:px-8"
           >
             {item.ctaLabel}
           </button>

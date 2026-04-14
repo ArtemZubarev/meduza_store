@@ -33,14 +33,14 @@ export default function HeroHoreca() {
         Оснащаем рестораны, отели и фуд-корты лучшей профессиональной техникой
         напрямую с заводов для бесперебойной работы вашей кухни и бизнеса.
       </p>
-      <div className="inline-flex gap-3">
-        <div className="flex gap-2 bg-white rounded-3xl py-4 px-4 font-semibold">
-          <CircleCheck />
-          <span>3 контракта с топ фабриками</span>
+      <div className="mx-auto flex max-w-md flex-col items-stretch gap-2 px-2 sm:inline-flex sm:max-w-none sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-3 md:gap-4">
+        <div className="flex items-center justify-center gap-2 rounded-2xl bg-white px-3 py-3 text-left text-sm font-semibold sm:justify-start sm:rounded-3xl sm:px-4 sm:py-4 sm:text-base">
+          <CircleCheck className="h-5 w-5 shrink-0 sm:h-6 sm:w-6" />
+          <span className="min-w-0">3 контракта с топ фабриками</span>
         </div>
-        <div className="flex gap-2 bg-white rounded-3xl py-4 px-4 font-semibold">
-          <CircleCheck />
-          <span>Любое оборудование</span>
+        <div className="flex items-center justify-center gap-2 rounded-2xl bg-white px-3 py-3 text-left text-sm font-semibold sm:justify-start sm:rounded-3xl sm:px-4 sm:py-4 sm:text-base">
+          <CircleCheck className="h-5 w-5 shrink-0 sm:h-6 sm:w-6" />
+          <span className="min-w-0">Любое оборудование</span>
         </div>
       </div>
       <div ref={containerRef} className="relative max-w-6xl mx-auto md:mt-10">

@@ -422,8 +422,8 @@ export const CircleCheck = ({ className }: { className?: string }) => (
     height="25"
     viewBox="0 0 25 25"
     fill="none"
-  >
     className={className}
+  >
     <g clipPath="url(#clip0_102_1252)">
       <path
         d="M21.3388 21.3388C26.2203 16.4573 26.2203 8.54272 21.3388 3.66117C16.4572 -1.22039 8.54265 -1.22039 3.6611 3.66117C-1.22045 8.54272 -1.22045 16.4573 3.6611 21.3388C8.54265 26.2204 16.4572 26.2204 21.3388 21.3388Z"
