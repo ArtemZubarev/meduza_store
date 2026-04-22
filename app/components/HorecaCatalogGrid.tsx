@@ -252,8 +252,9 @@ function PromoCard({ item }: { item: PromoItem }) {
           {item.body}
         </p>
         <div className="mt-auto flex shrink-0 gap-2 pt-1">
-          <button
-            type="button"
+          <a
+            href={item.href}
+            target="_blank"
             style={{
               background: item.id === "4" ? "#fff" : "",
               color: item.id === "4" ? "#181a1c" : "",
@@ -261,7 +262,7 @@ function PromoCard({ item }: { item: PromoItem }) {
             className="min-h-11 w-full cursor-pointer rounded-2xl bg-[#5ab2ff] px-6 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-[#4a9ee6] sm:py-4 md:rounded-3xl md:px-8"
           >
             {item.ctaLabel}
-          </button>
+          </a>
         </div>
       </div>
     </article>
