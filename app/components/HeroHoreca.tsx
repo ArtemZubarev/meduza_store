@@ -21,7 +21,7 @@ export default function HeroHoreca() {
   const yHero = useTransform(scrollYProgress, [0, 1], [0, 40]);
 
   return (
-    <section className="w-full max-w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] mx-auto px-4 pb-0 pt-10 md:pt-20 md:pb-20 text-center overflow-hidden">
+    <section className="w-full max-w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] mx-auto px-4 pb-0 pt-10 md:pt-20 md:pb-20 text-center pb-20 md:mb-0 overflow-hidden">
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-8 leading-[32px] md:leading-[99%] ">
         <span className="text-[#ababab]">HoReCa из Китая:</span>
         <span className="text-[#181a1c]">
@@ -47,7 +47,7 @@ export default function HeroHoreca() {
         {/* Декоративные изображения - скрыты на мобильных */}
         <motion.img
           src={imgLeftBox}
-          className=" md:block absolute top-20 -left-10 md:left-10 lg:left-10 rounded-2xl md:rounded-3xl max-w-[120px] md:max-w-[303px] z-10"
+          className=" md:block absolute top-10 md:top-4 -left-10 md:left-10 lg:left-10 rounded-2xl md:rounded-3xl max-w-[120px] md:max-w-[303px] z-10"
           alt=""
           initial={{ opacity: 0, x: -60 }}
           animate={{ opacity: 1, x: 0 }}
@@ -55,7 +55,7 @@ export default function HeroHoreca() {
         />
         <motion.img
           src={imgSearch}
-          className=" md:block absolute -bottom-6 scale-75 md:scale-100 md:bottom-10 -left-10 md:left-0 rounded-2xl md:rounded-3xl max-w-[200px] md:max-w-[300px] z-10"
+          className=" md:block absolute -bottom-14 -md:bottom-6 scale-75 md:scale-100 md:bottom-10 -left-10 md:left-0 rounded-2xl md:rounded-3xl max-w-[200px] md:max-w-[300px] z-10"
           alt=""
           initial={{ opacity: 0, x: -80 }}
           animate={{ opacity: 1, x: 0 }}
@@ -70,7 +70,7 @@ export default function HeroHoreca() {
           <motion.div
             style={{ y: yHero }}
             // className="relative w-[70%] mx-auto h-full min-h-[280px] md:min-h-[450px]"
-            className="relative w-[70%] mx-auto h-full max-w-[440px]"
+            className="relative w-[50%] mx-auto h-full max-w-[440px]"
           >
             <img
               src={imgHero}
@@ -81,7 +81,7 @@ export default function HeroHoreca() {
         </motion.div>
         <motion.img
           src={imgRightBox}
-          className=" md:block absolute bottom-30 -right-10 md:right-10 lg:right-0 rounded-2xl md:rounded-3xl max-w-[120px] md:max-w-[326px] z-10"
+          className=" md:block absolute bottom-4 md:bottom-0 -right-10 md:right-10 lg:right-0 rounded-2xl md:rounded-3xl max-w-[100px] md:max-w-[326px] z-10"
           alt=""
           initial={{ opacity: 0, x: 60 }}
           animate={{ opacity: 1, x: 0 }}
@@ -89,7 +89,7 @@ export default function HeroHoreca() {
         />
         <motion.img
           src={imgKey}
-          className=" lg:block absolute top-20 scale-75 md:scale-100 -right-12 md:right-6 rounded-2xl md:rounded-3xl max-w-[200px] md:max-w-[260px] z-10"
+          className=" lg:block absolute top-20 scale-55 md:scale-100 -right-15 -md:right-12 md:right-6 rounded-2xl md:rounded-3xl max-w-[200px] md:max-w-[260px] z-10"
           alt=""
           initial={{ opacity: 0, x: 80 }}
           animate={{ opacity: 1, x: 0 }}
