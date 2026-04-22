@@ -1,4 +1,5 @@
 const imgHoreca = "/images/horeca.png";
+const imgPromo = "/images/promo.png";
 
 type ProductItem = {
   type: "product";
@@ -120,12 +121,14 @@ const catalogItems: HorecaCatalogItem[] = [
     id: "8",
     image: "/images/products/07.png",
     imageMaxWidth: "279px",
-    alt: "Пароконвектомат промышленный",
-    title: "Пароконвектомат промышленный",
+    alt: "Фильтр для фритюрного масла",
+    title: "Фильтр для фритюрного масла",
     description:
-      "Профессиональный пароконвектомат с сенсорным управлением и диапазоном 25–250 °C. Интеллектуальный выбор блюд и высокая мощность для идеальной жарки и пара.",
-    price: "от 270 000 Р",
-    reviewUrl: "",
+      "Профессиональное устройство разработаннное для увеличения срока службы и качество масла. Аппарат избавляет его от всех вредных примесей – нагара и полимеров триглицеридов.",
+    price: "от 72 000 Р",
+    badge: "Выгодно",
+    reviewUrl:
+      "https://www.instagram.com/reel/DUQ9yF-jam6/?igsh=MWhsbmJnNWk3czhwaw==",
   },
   {
     type: "product",
@@ -145,12 +148,13 @@ const catalogItems: HorecaCatalogItem[] = [
     id: "11",
     image: "/images/products/09.png",
     imageMaxWidth: "260px",
-    alt: "Аппарат для упаковки стиков, пакетов и др тары",
-    title: "Аппарат для упаковки стиков, пакетов и др тары",
+    alt: "Аппарат для приготовления питы и лаваша",
+    title: "Аппарат для приготовления питы и лаваша",
     description:
-      "Высокоскоростная фасовка сыпучих и жидких продуктов в порционную стик-упаковку. Автоматизированный цикл формирования, наполнения и запайки пакетов,зипов и другой тары.",
-    price: "от 338 000 Р",
-    badge: "Под заказ",
+      "Гидравлический аппарат прессового типа с большим количеством регулировок (толщина / время зажатия /температура) создан для выпекания круглого лаваша и питы.",
+    price: "от 123 000 Р",
+    reviewUrl:
+      "https://www.instagram.com/reel/DUjErbjDYd7/?igsh=cWZxZXA1NGpjcXdh",
   },
   {
     type: "promo",
@@ -214,7 +218,7 @@ function PromoCard({ item }: { item: PromoItem }) {
       style={{
         background:
           item.id === "4"
-            ? "linear-gradient(180deg, #27A6E6 0%, #1572A1 122.64%)"
+            ? "linear-gradient(180deg, #1572A1 0%, #27A6E6 122.64%)"
             : "#181a1c",
       }}
     >
@@ -227,6 +231,16 @@ function PromoCard({ item }: { item: PromoItem }) {
           />
         </div>
       ) : null}
+      {item.id === "4" ? (
+        <div className="w-full shrink-0 overflow-hidden rounded-t-2xl md:rounded-t-3xl">
+          <img
+            src={imgPromo}
+            alt="Horeca"
+            className="w-[90%] object-cover ml-auto pt-4"
+          />
+        </div>
+      ) : null}
+
       <div className="flex min-h-min flex-1 flex-col gap-2 p-4 pb-5 md:p-6 md:pb-6">
         <h3 className="line-clamp-3 min-h-[3.25rem] text-xl leading-snug font-bold text-white md:min-h-[3.5rem] md:text-2xl">
           {item.title}
@@ -237,6 +251,10 @@ function PromoCard({ item }: { item: PromoItem }) {
         <div className="mt-auto flex shrink-0 gap-2 pt-1">
           <button
             type="button"
+            style={{
+              background: item.id === "4" ? "#fff" : "",
+              color: item.id === "4" ? "#181a1c" : "",
+            }}
             className="min-h-11 w-full cursor-pointer rounded-2xl bg-[#5ab2ff] px-6 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-[#4a9ee6] sm:py-4 md:rounded-3xl md:px-8"
           >
             {item.ctaLabel}
