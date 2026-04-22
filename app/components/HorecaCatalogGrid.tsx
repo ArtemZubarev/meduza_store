@@ -236,7 +236,7 @@ function PromoCard({ item }: { item: PromoItem }) {
           <img
             src={imgPromo}
             alt="Horeca"
-            className="w-[90%] object-cover ml-auto pt-4"
+            className="w-[90%] object-cover mx-auto pt-4"
           />
         </div>
       ) : null}
