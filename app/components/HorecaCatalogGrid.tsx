@@ -20,6 +20,7 @@ type PromoItem = {
   title: string;
   body: string;
   ctaLabel: string;
+  href?: string;
 };
 
 export type HorecaCatalogItem = ProductItem | PromoItem;
@@ -34,7 +35,7 @@ const catalogItems: HorecaCatalogItem[] = [
     title: "Вытяжка с электрофильтром",
     description:
       "Промышленная кухонная вытяжка с электрофильтром обеспечивает до 97% очистки воздуха от жира и дыма.Надёжное решение для профессиональных кухонь.",
-    price: "от 82 000 Р",
+    price: "от 111 000 Р",
     badge: "Топ продукт",
     reviewUrl:
       "https://www.instagram.com/reel/DTvinHNDSos/?igsh=MXN6dHFqa212anZzbQ==",
@@ -62,7 +63,7 @@ const catalogItems: HorecaCatalogItem[] = [
     badge: "Высокий спрос",
     description:
       "Обеспечивает быструю и герметичную упаковку продуктов с точным контролем температуры. Эффективное решение для пищевого производства и dark-kitchen.",
-    price: "40 100 Р",
+    price: "44 100 Р",
     reviewUrl:
       "https://www.instagram.com/reel/DTf3CoLDTTH/?igsh=a2Y4ZnluZDI3MHg0",
   },
@@ -101,6 +102,7 @@ const catalogItems: HorecaCatalogItem[] = [
       "Большое количество каталогов вы можете найти в нашем телеграм-канале",
     body: "Если вы уже посмотрели и не нашли необходимый Вам товар, то мы с радостью найдем его для Вас на фабриках Китая.",
     ctaLabel: "К каналу",
+    href: "https://t.me/meduzastor",
   },
   {
     type: "product",
@@ -162,6 +164,7 @@ const catalogItems: HorecaCatalogItem[] = [
     title: "HoReCa под ключ: от изящной тарелки до мощного промышленного цеха.",
     body: "Оснастим ваш бизнес профессиональным оборудованием. Экономьте бюджет с технологиями, которые работают на ваш успех 24/7.",
     ctaLabel: "Обсудим?",
+    href: "https://t.me/meduzamen",
   },
 ];
 
